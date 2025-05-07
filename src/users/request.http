@@ -1,6 +1,6 @@
 
 ### Find a user by id
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/5
 
 
 ### Create user
@@ -16,4 +16,13 @@ content-type: application/json
 GET http://localhost:3000/auth/?email=james@jameson.com
 
 ### Delete user with a given id
-DELETE http://localhost:3000/auth/22
+DELETE http://localhost:3000/auth/4
+
+### Update a user
+PATCH http://localhost:3000/auth/4
+content-type: application/json
+
+{
+    "email": "james@jameson.com",
+    "password": "sasdad"
+}
