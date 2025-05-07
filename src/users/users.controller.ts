@@ -2,17 +2,27 @@ import { Body, Controller, Post, Patch, Delete, Get, Param, Query, NotFoundExcep
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UsersService } from './users.service';
+import { AuthService } from './auth.service';
 import { Serialize } from 'src/interceptors/serialize.interceptor';
 import { UserDto } from './dtos/user.dto';
 @Serialize(UserDto)
 @Controller('auth')
 export class UsersController {
-    constructor(private UsersService: UsersService) {}
+    constructor(
+        private UsersService: UsersService,
+        private authService: AuthService
+    ) {}
     @Post('/signup')
     createUser(@Body() body: CreateUserDto) {
         const {email, password} = body;
-        this.UsersService.create(email, password);
+        return this.authService.signup(email, password);
     };
+
+    @Post('/signin')
+    signin(@Body() body:  CreateUserDto) {
+        const { email, password} = body;
+        return this.authService.signin(email, password);
+    }
 
     
     @Get('/:id')

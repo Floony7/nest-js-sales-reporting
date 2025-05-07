@@ -8,8 +8,8 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "james@jameson.com",
-    "password": "tricky"
+    "email": "alex@monash.com",
+    "password": "Perfection"
 }
 
 ### Find user by email
@@ -25,4 +25,13 @@ content-type: application/json
 {
     "email": "james@jameson.com",
     "password": "sasdad"
+}
+
+### Signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "alex@monash.com",
+    "password": "Perfection"
 }
