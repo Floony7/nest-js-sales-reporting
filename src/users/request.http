@@ -6,12 +6,12 @@ GET http://localhost:3000/auth/5
 ### Sign out user
 POST http://localhost:3000/auth/signout
 
-### Create user
+### Sign up user
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "alex@monash.com",
+    "email": "nathan@mackinnon.com",
     "password": "Perfection"
 }
 
