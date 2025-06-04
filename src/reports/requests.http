@@ -1,0 +1,14 @@
+
+### Create Report
+POST http://localhost:3000/reports
+content-type: application/json
+
+{ 
+"price": 100000,
+"make": "Lexus",
+"model": "IS300h",
+"year": 2018,
+"lng": 0,
+"lat": 0,
+"mileage": 100000
+}
