@@ -5,10 +5,20 @@ content-type: application/json
 
 { 
 "price": 100000,
-"make": "Lexus",
-"model": "IS300h",
-"year": 2018,
+"make": "Aston Martin",
+"model": "DB9",
+"year": 2009,
 "lng": 0,
 "lat": 0,
 "mileage": 100000
 }
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/6
+content-type: application/json
+
+{
+    "approved": false
+}
+
+### Get a report
