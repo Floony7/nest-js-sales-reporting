@@ -11,7 +11,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "nathan@mackinnon.com",
+    "email": "blank@blanketyblank.com",
     "password": "Perfection"
 }
 

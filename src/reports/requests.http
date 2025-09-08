@@ -5,8 +5,8 @@ content-type: application/json
 
 { 
 "price": 100000,
-"make": "Aston Martin",
-"model": "DB9",
+"make": "Datsun",
+"model": "Shitter Thou",
 "year": 2009,
 "lng": 0,
 "lat": 0,
